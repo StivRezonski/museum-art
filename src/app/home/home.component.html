@@ -1,0 +1,11 @@
+<app-tree-component
+  (imageTitleAndDescription)="getDataForDetailPreview($event)"
+  class="split tree-component">
+</app-tree-component>
+
+<app-detail-preview
+  [imageUrl]="imgUrl"
+  [artSelected]="artTitle"
+  [artDescription]="description"
+  class="split detail-preview-component">
+</app-detail-preview>
