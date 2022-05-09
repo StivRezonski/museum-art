@@ -1,0 +1,42 @@
+.mat-radio-button ~ .mat-radio-button {
+  padding-top: 15px;
+  margin-left: 16px;
+}
+
+.container {
+  padding-left: 25px;
+}
+
+.search-input-field {
+  padding-top: 25px;
+}
+
+.sub-container {
+  margin-left: 15px;
+  padding-top: 15px;
+}
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.example-tree .mat-nested-tree-node div[role=group] {
+  padding-left: 40px;
+}
+
+.example-tree div[role=group] > .mat-tree-node {
+  padding-left: 40px;
+}
+
+.txtColor {
+  color: deepskyblue;
+  cursor: pointer;
+}
+

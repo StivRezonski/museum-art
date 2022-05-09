@@ -1,0 +1,50 @@
+<div class=" split edit-details">
+  <form class="example-form" [formGroup]="editForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Title</mat-label>
+      <input id="title" matInput required minlength="4" formControlName="title" [(ngModel)]="titleInternally">
+      <div class="text-danger"
+           *ngIf="(registerFormControl.title.touched) && registerFormControl.title.errors?.required">
+        Title is required
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Image URL</mat-label>
+      <input matInput formControlName="url" [(ngModel)]="urlInternally">
+      <div class="text-danger"
+           *ngIf="(registerFormControl.url.touched) && registerFormControl.url.errors?.required">
+        Please provide us proper url link
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea formControlName="description" matInput cdkTextareaAutosize [(ngModel)]="descriptionInternally" >{{ description }}</textarea>
+    </mat-form-field>
+  </form>
+
+  <button class="btn btn-primary" mat-raised-button color="primary" [disabled]="!editForm.valid" type="submit" (click)="saveEditedDetails()">Save</button>
+
+  <button class="btn btn-primary" mat-stroked-button color="primary" (click)="previewEditedDetails()">Preview</button>
+
+</div>
+
+<div class="split preview-changes">
+
+  <div class="title">
+    <div class="container">
+      <div class="img-container">
+        <img alt="image" src="{{ url }}">
+      </div>
+    </div>
+
+    <h1>{{ title }}</h1>
+
+    <div class="description-text">
+      {{ description }}
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,22 @@
+<div class="container">
+<div class="img-container">
+  <img alt="image" src="{{imageUrl}}">
+</div>
+
+<div *ngIf="artDescription && imageUrl">
+  <mat-divider></mat-divider>
+    <button class="btn btn-primary" mat-raised-button color="primary" (click)="editSelectedArt()">Edit</button>
+</div>
+
+<div class="description">
+  <h1>{{ artSelected }}</h1>
+
+  <div class="description-text">
+    {{ artDescription }}
+  </div>
+
+</div>
+</div>
+
+
+
